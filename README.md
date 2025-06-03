@@ -1,114 +1,136 @@
-# 19CS301Module8
+# 19CS301 Module8
 EXPTNO.8a Program to find Find the simple interest
 
-### Aim: To Write a Python Program to find Find the simple interest by getting the principal, rate and time value from the user
+### Aim: 
+To Write a python program to find the time taken to cross an electric pole? [Distance = speed*time]
+
 ### Algorithm:
 
 STEP 1: Start.
 
-STEP 2: Define a function.
+STEP 2:Assign the value 75 to the variable dis.
 
-STEP 3: Create variable 'p','r','t' for principal,rate of interest and time. STEP 4: Get the input of p,r and t from user.
+STEP 3:Multiply 54 by (5 / 18) and store the result in speed.
 
-STEP 5 : Using the formula (p*r*t)/100 calculate the result. STEP 6: Print the result.
+STEP 4: time = dis / speed
 
-STEP 7: Stop.
+STEP 5: Print the value of time.
+
+STEP 6: Stop.
 
 ### Program:
 ```
-def simpleInterest(p,t,r):
-      si = p*t*r/100
-       return si
-p = eval(input())
-r = eval(input())
-t = eval(input())
+dis=75
+speed=54*(5/18)
+print(dis/speed)
 ```
 ### Output:
-![image](https://github.com/user-attachments/assets/0cc71222-9697-4545-a937-b330407cbc02)
-
-
-
+![Screenshot 2025-06-02 135016](https://github.com/user-attachments/assets/ebbd6d4e-a330-447e-bd1d-749448d4bf49)
 
 
 ### Result: Thus, the given program is implemented and executed successfully .
 
-EXPTNo.8b program to display elements from a list, present at odd index positions
+EXPTNo.8b program to print the numbers in reverse order.
 
-### Aim: To Write a python program to display elements from a list, present at odd index positions
+### Aim: 
+To Write a python program to print the numbers in reverse order
+
 ### Algorithm:
 
 STEP 1: Start.
 
-STEP 2: Define a function.
+STEP 2: Get the input of a from user.
 
-STEP 3: Create a list and a variable a.
+STEP 3: Using while loop .
 
-STEP 4: Get the input of a from user.
+STEP 4: get the unit digit.
 
-STEP 5 : Using loop get the inputs and append in list.
+STEP 5:print modulo 10
 
-STEP 6: Using another loop print the elements in the odd index position of the list. 
-
-STEP 7: Stop.
+STEP 6: Stop.
 
 ### Program:
 ```
-def odd(a):
-         l=[]
-          for i in range(a):
-x = int(input())
-l.append(x)
-for i in range(a):
-           if i%2!=0:
-                print(l[i], end=" ")
- a = int(input())
-odd(a)
+n=int(input())
+while(n>0):
+    print(n%10,end="")
+    n=n//10
+
 ```
 ### Output:
-![image](https://github.com/user-attachments/assets/a13fba7c-36b5-4227-98c1-82ab22a7804a)
+![Screenshot 2025-06-02 135150](https://github.com/user-attachments/assets/8323515a-953b-4c40-a975-4fe335868986)
+
 
 ### Result: Thus, the given program is implemented and executed successfully .
  
 
-EXPT NO>8C To Write a python program to Given the participants'	score sheet for your University Sports Day, you are required to find the runner-up score
-### Aim: To Write a python program to Given the participants' score sheet for your University Sports Day, you are required to find the runner-up score. You are given scores. Store them 
-         in a list and find the score of the runner-up.
+EXPT NO:8C read in the value of n followed by n lines of commands where each command will be of the 7 types
 
+
+### Aim: 
+To Initialize your list and read in the value of n followed by n lines of commands where each command will be of the 7 types. Iterate through each command in order and perform the corresponding operation on your list.
 
 ### Algorithm:
-STEP 1: Start.
+Start the program.
 
-STEP 2: Create a variable n.
+Input an integer N (the number of commands to be executed).
 
-STEP 3: Get the value of n from user.
+Initialize an empty list l.
 
-STEP 4: Get the number of inputs from user and split the input and append in a list. STEP 5: Using set function remove duplicates from the list.
+Repeat the following steps N times:
 
-STEP 6: Using sort function reorder the list in ascending order. STEP 7: Print the result.
+Read a line of input and split it into a list s.
 
-STEP 8: Stop.
+Based on the first element of s (i.e., the command), perform the corresponding operation:
 
+If s[0] is 'insert': insert int(s[2]) at index int(s[1]) in list l.
+
+If s[0] is 'remove': remove the first occurrence of int(s[1]) from list l.
+
+If s[0] is 'append': add int(s[1]) to the end of list l.
+
+If s[0] is 'pop': remove the last element of the list l.
+
+If s[0] is 'sort': sort the list in ascending order.
+
+If s[0] is 'reverse': reverse the order of elements in the list.
+
+If s[0] is 'print': display the current state of the list l.
+
+End the program.
 
 ### Program:
-```if  name	== '   main    ':
-          n = int(input())
-          arr = map(int, input().split())
-          arr2 = list(set(arr))
-          arr2.sort()
-print(arr2[-2])
-
+```
+N=int(input())
+l=[]
+for i in range(N):
+    s=input().split()
+    if s[0]=='insert':
+        l.insert(int(s[1]),int(s[2]))
+    elif s[0]=='remove':
+        l.remove(int(s[1]))
+    elif s[0]=='append':
+        l.append(int(s[1]))
+    elif s[0]=='pop':
+        l.pop()
+    elif s[0]=='sort':
+        l.sort()
+    elif s[0]=='reverse':
+        l.reverse()
+    elif s[0]=='print':
+        print(l)
+```
 ### Output:
  
-![image](https://github.com/user-attachments/assets/032939c0-f500-4bbb-9b19-87b3c54d8454)
-
- 
+![Screenshot 2025-06-02 135325](https://github.com/user-attachments/assets/23b79f02-d03e-44bf-af95-0ee328d6ffc9)
 
 ### Result: Thus, the given program is implemented and executed successfully .
  
 
 
 EX: 8.d program to square all the even numbers and cube all odd numbers from a list of integers
-### Aim: To Develop a python program to square all the even numbers and cube all odd numbers from a list of integers. Get the starting and ending range to create a list.
+### Aim: 
+To Develop a python program to square all the even numbers and cube all odd numbers from a list of integers. Get the starting and ending range to create a list.
 
 
 ### Algorithm:
@@ -137,9 +159,29 @@ f,l = int(input()),int(input())
 ### Output:
 ![image](https://github.com/user-attachments/assets/4a9076d8-a2cf-44e1-b7d1-e638b7edf12f)
 
-
-
 ### Result: Thus, the given program is implemented and executed successfully .
  
+EXPTNO: 8e Reverse the sentence.
 
+### Aim:
+To Write a python program to print the sentence by reversing each word in sentence.
 
+### Algorithm
+Split the input string into words
+
+reverse each word
+
+print the reversed words separated by spaces.
+
+### Program:
+```
+n=input().split()
+for i in n:
+    print(i[::-1],end=" ")
+```
+
+### Output :
+![Screenshot 2025-06-02 135458](https://github.com/user-attachments/assets/90709047-b092-4cd4-85e2-93fbcbf91962)
+
+### Result:
+Thus, the given program is implemented and executed successfully .
